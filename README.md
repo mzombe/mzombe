@@ -73,10 +73,6 @@ I bridge the gap between design intent and stable, shippable features — invest
 ---
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/mzombe/mzombe/main/metrics.svg" alt="GitHub Metrics"/>
-</div>
-
-<div align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mzombe/mzombe/output/github-contribution-grid-snake-dark.svg"/>
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mzombe/mzombe/output/github-contribution-grid-snake.svg"/>
