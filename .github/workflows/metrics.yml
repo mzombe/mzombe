@@ -1,0 +1,45 @@
+name: Metrics
+
+on:
+  # Runs every 12 hours
+  schedule:
+    - cron: "0 */12 * * *"
+  # Allows manual run from the Actions tab
+  workflow_dispatch:
+  # Runs on every push to main
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  metrics:
+    name: Generate metrics
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate metrics.svg
+        uses: lowlighter/metrics@latest
+        with:
+          # Personal Access Token stored as a repository secret (see setup notes)
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: mzombe
+          filename: metrics.svg
+          template: classic
+          config_timezone: America/Sao_Paulo
+
+          # Base panels: header + repositories summary
+          base: header, repositories
+
+          # Languages breakdown — highlights the dominant C#
+          plugin_languages: yes
+          plugin_languages_sections: most-used
+          plugin_languages_details: percentage
+          plugin_languages_colors: github
+          plugin_languages_limit: 8
+          plugin_languages_analysis_timeout: 15
+
+          # 3D contribution calendar — sober and clean
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year

@@ -73,7 +73,7 @@ I bridge the gap between design intent and stable, shippable features — invest
 ---
 
 <div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=mzombe&show_icons=true&theme=cobalt&include_all_commits=true&count_private=true" alt="GitHub Stats"/>
+  <img src="https://raw.githubusercontent.com/mzombe/mzombe/main/metrics.svg" alt="GitHub Metrics"/>
 </div>
 
 <div align="center">
